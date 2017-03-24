@@ -1,0 +1,29 @@
+$headerHeight:50px;
+
+header{
+	position: fixed;
+	width: 100%;
+	top: 0;
+	height: $headerHeight;
+
+	.menu-list{
+		position: relative;
+		background: #333;
+		color: #fff;
+		line-height: $headerHeight;
+		li{
+			display: inline-block;
+			a{
+				display: block;
+				width: 100px;
+				color: #ccc;
+				text-decoration: none;
+				text-align: center;
+
+				&:hover{
+					color: #fff;
+				}
+			}
+		}
+	}
+}

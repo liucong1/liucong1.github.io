@@ -1,0 +1,17 @@
+---
+# Front matter comment to ensure Jekyll properly reads file.
+---
+
+@import "header";
+@import "footer";
+
+body{
+	background: #eee;
+	font: 14px / 1.42857 "Microsoft YaHei","微软雅黑","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.main-content{
+	width: 1080px;
+	margin: 55px auto 0;
+	background: #fff;
+}

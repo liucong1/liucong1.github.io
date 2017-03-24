@@ -1,9 +1,15 @@
 ---
 layout: default
-title: 我的Blog
+title: 刘聪的个人Blog
+header: list
 ---
-<h2>{{ page.title }}</h2>
-<p>最新文章</p>
+
+# {{ page.title }}
+
+<p>这是我的个人博客，今后会不定期在这儿记录个人成长过程中的心得，或者收藏一些前端常用知识。</p>
+
+<p>文章列表</p>
+
 <ul>
     {% for post in site.posts %}
         <li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
