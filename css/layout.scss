@@ -8,10 +8,44 @@
 body{
 	background: #eee;
 	font: 14px / 1.42857 "Microsoft YaHei","微软雅黑","Helvetica Neue",Helvetica,Arial,sans-serif;
+	color: rgb(64, 64, 64);
 }
 
 .main-content{
 	width: 1080px;
 	margin: 55px auto 0;
+	padding: 20px 40px;
 	background: #fff;
+	line-height: 2;
+}
+
+h1{
+	color: #00b7e9;
+	margin-bottom: 15px;
+	font-size: 28px;
+	font-weight: bold;
+	border-bottom: 1px dashed #ddd;
+}
+
+h2{
+	color: #00b7e9;
+	font-size: 30px;
+}
+
+pre{
+	display: block;
+	padding: 1em;
+	background: #002b36;
+	color: #839496;
+	margin: 20px 0;
+	overflow: scroll;
+}
+
+p{
+	margin: 10px 0;
+	text-indent: 2em;
+}
+
+.intro{
+	font-size: 16px;
 }
