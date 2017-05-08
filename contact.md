@@ -6,4 +6,6 @@ header: contact
 
 # {{page.title}}
 
-Email
+* 微信号： liucong-01
+
+* 邮箱： liucong0901@qq.com
