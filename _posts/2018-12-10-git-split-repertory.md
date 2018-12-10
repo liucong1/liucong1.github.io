@@ -62,6 +62,20 @@ git filter-branch \
 
 这样可以遍历所有的commit，删掉我们不想要的文件。使用 `--prune-empty` 参数可以将空分支给删掉。
 
+但是还是遇到了问题，执行了10分钟之后，报 `find: './api-doc/xxxx': No such file or directory` 的错。查了一下，加上 `-prune` 参数即可解决该问题。
+
+```
+git filter-branch \
+    --tree-filter 'find . ! \( -path "./terraform*" -o \
+                               -path "./packer*" -o \
+                               -path "./.git*" -o \
+                               -path "." \) \
+                        -prune -exec rm -fr {} +' \
+    --prune-empty \
+    HEAD
+```
+
 ## 参考
 [Git Subtree for Multiple Directories](https://cjohansen.no/git-subtree-multiple-dirs/)
 [Git 仓库拆拆拆](https://segmentfault.com/a/1190000002548731)
+[Delete files and directories by their names. No such file or directory](https://unix.stackexchange.com/questions/115863/delete-files-and-directories-by-their-names-no-such-file-or-directory)
