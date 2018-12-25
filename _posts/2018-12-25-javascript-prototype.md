@@ -1,4 +1,9 @@
-# 【转载】JavaScript 原型链
+---
+layout: default
+title: 【转载】JavaScript 原型链
+---
+
+# {{page.title}}
 
 > js的基本类型是数值类型、字符串类型、布尔类型、null和undefined。除此之外的所有其他类型都是对象。
 
