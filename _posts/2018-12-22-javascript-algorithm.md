@@ -146,5 +146,33 @@ console.log(insertionSort([999,123,21,3,56,778]));s
 * 对这两个子序列分别采用归并排序；
 * 将两个排序好的子序列合并成一个最终的排序序列。
 
+## 快速排序（Quick Sort）
 
+快速排序有两种
+
+```
+function quickSort(arr){
+  if(!arr || !arr.length){
+    return [];
+  }
+  
+  let start = arr[0];
+  
+  let left = []; 
+  let right = [];
+  
+  for(let i = 1 ; i< arr.length ; i++){
+    if(arr[i]< start){
+      left.push(arr[i])
+    }else{
+      right.push(arr[i])
+    }
+  }
+  return quickSort(left).concat([start]).concat(quickSort(right));
+}
+
+let output = quickSort([11,235,13,123,10,2,13,231,3,2,1,23]);
+
+console.log(output)
+```
 
