@@ -8,17 +8,19 @@
         s.parentNode.insertBefore(hm, s);
     })();
 
-    //评论框
-    var gitalk = new Gitalk({
-        clientID: 'ace185d1e26023f920e5',
-        clientSecret: '7a280009fd608478c9364362cbf961962c3f58f1',
-        repo: 'liucong1.github.io',
-        owner: 'liucong1',
-        admin: ['liucong1'],
-        id: location.pathname,      // Ensure uniqueness and length less than 50
-        distractionFreeMode: false  // Facebook-like distraction free mode
-    });
-    gitalk.render('gitalk-container');
+    if(typeof Gitalk !== 'undefined'){
+        //评论框
+        var gitalk = new Gitalk({
+            clientID: 'ace185d1e26023f920e5',
+            clientSecret: '7a280009fd608478c9364362cbf961962c3f58f1',
+            repo: 'liucong1.github.io',
+            owner: 'liucong1',
+            admin: ['liucong1'],
+            id: location.pathname,      // Ensure uniqueness and length less than 50
+            distractionFreeMode: false  // Facebook-like distraction free mode
+        });
+        gitalk.render('gitalk-container');
+    }
 
     //搜索框
     const sjs = SimpleJekyllSearch({
@@ -28,20 +30,4 @@
         searchResultTemplate: '<li class="search-result-list"><a href="{url}" title="{title}">{title}</a></li>',
         noResultsText: '',
     });
-
-    bind();
-
-    function bind(){
-
-        //搜索按钮
-        $("#header-btn-search").on("click",function () {
-            const value = $("#search-input").val();
-            if(value){
-                let arr = sjs.search(value);
-            }
-        });
-
-    }
-
-    console.log( sjs.search('Hello') );
 })()

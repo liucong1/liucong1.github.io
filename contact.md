@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: default-without-gitalk
 title: 联系方式
 header: contact
 ---

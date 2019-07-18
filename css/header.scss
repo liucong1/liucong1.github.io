@@ -79,7 +79,8 @@ header{
 
 	}
 	.menu-list{
-
+		position: relative;
+		z-index: 100;
 		float: left;
 
 		li{
