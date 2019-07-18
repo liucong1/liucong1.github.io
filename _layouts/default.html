@@ -6,7 +6,8 @@
     <title>{{ page.title }}</title>
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/layout.css">
-    <script src="/js/jquery-3.2.0.min.js"></script>
+    <link rel="stylesheet" href="/css/markdown.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
 </head>
 <body>
     <!--[if lte IE 8]>
@@ -22,12 +23,17 @@
     <![endif]-->
 
     {% include header.html %}
-    <div class="main-content">
+    <div class="main-content markdown-body">
         {{ content }}
+        <div id="gitalk-container"></div>
     </div>
+
+
     {% include footer.html %}
 
+    <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
     <script>
+
         var _hmt = _hmt || [];
         (function() {
             var hm = document.createElement("script");
@@ -35,6 +41,17 @@
             var s = document.getElementsByTagName("script")[0];
             s.parentNode.insertBefore(hm, s);
         })();
+
+        const gitalk = new Gitalk({
+            clientID: 'ace185d1e26023f920e5',
+            clientSecret: '7a280009fd608478c9364362cbf961962c3f58f1',
+            repo: 'liucong1.github.com',
+            owner: 'liucong1',
+            admin: ['liucong1'],
+            id: location.pathname,      // Ensure uniqueness and length less than 50
+            distractionFreeMode: false  // Facebook-like distraction free mode
+        });
+        gitalk.render('gitalk-container');
     </script>
 </body>
 </html>

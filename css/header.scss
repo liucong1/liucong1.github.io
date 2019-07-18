@@ -1,14 +1,20 @@
-$headerHeight:50px;
+$headerHeight:60px;
+.header{
+	height: $headerHeight;
+}
 
 header{
 	position: fixed;
 	width: 100%;
 	top: 0;
 	height: $headerHeight;
+	background: #fff;
+	border-bottom: 1px solid #f1f1f1;
+	color: #909090;
 
 	.menu-list{
 		position: relative;
-		background: #333;
+		font-size: 16px;
 		color: #fff;
 		line-height: $headerHeight;
 		li{
@@ -16,17 +22,18 @@ header{
 			a{
 				display: block;
 				width: 100px;
-				color: #ccc;
 				text-decoration: none;
 				text-align: center;
+				color: #909090;
 
 				&:hover{
-					color: #fff;
+					color: #007fff;
 				}
+
 			}
 		}
 		.active a{
-			color: #fff;
+			color: #007fff;
 			font-weight: bold;
 		}
 	}
