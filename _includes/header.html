@@ -1,9 +1,17 @@
 <div class="header">
     <header>
-        <ul class="menu-list">
-            <li class="{% if page.header=='list' %}active{% endif %}"><a href="/">文章列表</a></li>
-            <li class="{% if page.header=='resume' %}active{% endif %}"><a href="">个人简历</a></li>
-            <li class="{% if page.header=='contact' %}active{% endif %}"><a href="/contact">联系方式</a></li>
-        </ul>
+        <div class="header-box">
+            <ul class="menu-list">
+                <li class="{% if page.header=='list' %}active{% endif %}"><a href="/">文章列表</a></li>
+                <li class="{% if page.header=='resume' %}active{% endif %}"><a href="">个人简历</a></li>
+                <li class="{% if page.header=='contact' %}active{% endif %}"><a href="/contact">联系方式</a></li>
+            </ul>
+
+            <div id="search-container" class="search-container">
+                <input type="text" class="search-input" id="search-input" placeholder="搜索更新啦">
+                <img class="search-btn" id="header-btn-search" src="/static/img/icon/search-icon.png" alt="搜索" title="搜索">
+                <ul class="search-result" id="results-container"></ul>
+            </div>
+        </div>
     </header>
 </div>

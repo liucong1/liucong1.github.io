@@ -31,27 +31,9 @@
 
     {% include footer.html %}
 
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-    <script>
-
-        var _hmt = _hmt || [];
-        (function() {
-            var hm = document.createElement("script");
-            hm.src = "https://hm.baidu.com/hm.js?074e20c77711b699f5f2a42913589b6e";
-            var s = document.getElementsByTagName("script")[0];
-            s.parentNode.insertBefore(hm, s);
-        })();
-
-        const gitalk = new Gitalk({
-            clientID: 'ace185d1e26023f920e5',
-            clientSecret: '7a280009fd608478c9364362cbf961962c3f58f1',
-            repo: 'liucong1.github.com',
-            owner: 'liucong1',
-            admin: ['liucong1'],
-            id: location.pathname,      // Ensure uniqueness and length less than 50
-            distractionFreeMode: false  // Facebook-like distraction free mode
-        });
-        gitalk.render('gitalk-container');
-    </script>
+    <script src="/js/simple-jekyll-search.min.js"></script>
+    <script src="/js/main.js"></script>
 </body>
 </html>
